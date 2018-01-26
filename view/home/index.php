@@ -1,4 +1,4 @@
-<section class="head">	
+<section class="head">
 	Header, Scroll down for more!
 </section>
 
@@ -7,4 +7,4 @@
 	<div class="choice_block"></div>
 </div>
 
-<div class="quiz_container">Quiz</div>
+<div class="quiz"></div>

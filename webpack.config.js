@@ -2,17 +2,28 @@
 
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var path = require('path');
+
+var config = require('./_config'); //paths config..
+
+var NODE_ENV = '\'development\'';
+
+process.argv.forEach(arg => {
+  if(arg === '-p' || arg === '-d'){
+    NODE_ENV = '\'production\'';
+  }
+});
 
 module.exports = {
 
   entry: [
-    './_js/script.js',
-    './_scss/style.scss'
+    config.build('js', 'src'), //JavaScript entry point
+    config.build('css', 'src') //CSS entry point
   ],
 
   output: {
-    path: './js/',
-    filename: 'script.js' //JavaScript end point
+    path: config.js.dest.path,
+    filename: config.js.dest.file //JavaScript end point
   },
 
   //quickest, webpack -d -p for production
@@ -26,9 +37,26 @@ module.exports = {
     loaders: [
 
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel',
+        query: {
+          babelrc: path.join(__dirname, '.babelrc')
+        }
+      },
+
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'eslint'
+      },
+
+      {
+        test: /\.csv?$/,
+        loader: 'dsv',
+        query: {
+          delimiter: ';'
+        }
       },
 
       {
@@ -44,9 +72,14 @@ module.exports = {
 
     return [
 
-      require('autoprefixer-core')({
-        browsers: ['IE >= 9', 'last 2 version'],
-        cascade: false
+      require('postcss-will-change'),
+      require('postcss-cssnext')({
+        browsers: ['IE >= 10', 'last 2 version'],
+        features: {
+          autoprefixer: {
+            cascase: false
+          }
+        }
       })
 
     ];
@@ -59,12 +92,25 @@ module.exports = {
     new webpack.optimize.DedupePlugin(),
 
     //extract CSS into seperate file
-    new ExtractTextPlugin('../css/style.css')
+    new ExtractTextPlugin(
+      config.build('css', 'dest')
+    ),
+
+    //react smaller build
+    new webpack.DefinePlugin({
+      'process.env': {NODE_ENV: NODE_ENV}
+    })
+
 
   ],
 
   resolve: {
-    extensions: ['', '.json', '.js', '.css']
+    extensions: ['', '.json', '.js', '.css', '.jsx', '.csv'],
+    fallback: path.join(__dirname, 'node_modules')
+  },
+
+  resolveLoader: {
+    fallback: path.join(__dirname, 'node_modules')
   }
 
 };

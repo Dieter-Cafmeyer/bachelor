@@ -20,16 +20,15 @@
   <body>
 
     <header class="navigation">
-      
-      
+
+
     </header>
 
     <main>
       <?php echo $content; ?>
     </main>
-    
-    
-    <script src="../js/script.js" type="text/javascript"></script>
+
+    <script src="../js/script.js"></script>
   </body>
 
 </html>
