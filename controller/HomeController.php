@@ -13,6 +13,10 @@ class HomeController extends Controller {
 	public function index() {
     /* CODE VOOR HOME */
 	}
+
+  public function info() {
+    /* CODE VOOR INFO */
+  }
 }
 
 

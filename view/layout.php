@@ -20,8 +20,17 @@
   <body>
 
     <header class="navigation">
+      <div class="innernavigation">
+        <a href="/index.php?page=home"><h1 class="logo"><span>Logo</span></h1></a>
 
-
+        <nav>
+          <ul>
+            <a href="/index.php?page=home"><li class="nav_active">Home</li></a>
+            <a href="/index.php?page=info"><li>Info</li></a>
+            <a href="/index.php?page=home"><li>Lorem</li></a>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>

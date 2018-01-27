@@ -2,10 +2,10 @@
 
 import React, {Component} from 'react';
 
-export default class Question1 extends Component {
+export default class Question2 extends Component {
   constructor() {
     super();
-    this.name = 'Question1';
+    this.name = 'Question2';
   }
 
   render() {
