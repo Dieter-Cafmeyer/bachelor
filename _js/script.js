@@ -22,6 +22,7 @@ const init = () => {
 
 };
 
+
 function choice () {
   quizInfo.onclick = function(){
     document.querySelector('.choice').style.display = 'none';
@@ -29,8 +30,9 @@ function choice () {
   };
 
   allInfo.onclick = function(){
-    window.location = '/index.php?page=info';
+    window.location = '/index.php?page=diepgaand';
   };
 }
 
 init();
+

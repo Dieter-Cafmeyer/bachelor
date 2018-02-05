@@ -12,9 +12,9 @@ $routes = array(
         'controller' => 'Home',
         'action' => 'index'
     ),
-    'info' => array(
+    'diepgaand' => array(
         'controller' => 'Home',
-        'action' => 'info'
+        'action' => 'diepgaand'
     )
 );
 

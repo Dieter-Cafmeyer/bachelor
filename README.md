@@ -7,5 +7,5 @@ Je kan op de website een quiz doorlopen waarbij je een antwoord moet geven op vr
 
 Op het einde van de quiz zie je statistieken van wat andere mensen hebben gegeven als antwoord. Ook wordt je onderverdeeld in een categorie. Als je bijvoorbeeld het werk voorop stelt op kinderen wordt je gezien als een carrière man / vrouw.
 
-##Wat het doel is?
+## Wat het doel is?
 Mensen informeren over vruchtbaarheid en de afname ervan over tijd. Dit project kan ook in beide richtingen werken want mensen krijgen de mogelijkheid om hun antwoorden door te sturen (anoniem) zodat Vives een beter zicht krijgt op wat Vlamingen hun standpunten zijn.

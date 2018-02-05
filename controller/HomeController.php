@@ -14,7 +14,7 @@ class HomeController extends Controller {
     /* CODE VOOR HOME */
 	}
 
-  public function info() {
+  public function diepgaand() {
     /* CODE VOOR INFO */
   }
 }
