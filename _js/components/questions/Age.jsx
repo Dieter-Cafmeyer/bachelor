@@ -2,11 +2,9 @@
 
 import React, {Component} from 'react';
 
-export default class Question2 extends Component {
+export default class Age extends Component {
   constructor() {
     super();
-
-    console.log(this.props);
   }
 
   setAge(value) {

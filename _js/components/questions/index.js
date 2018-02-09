@@ -1,7 +1,9 @@
 'use strict';
 
-export Question1 from './Question1';
-export Question2 from './Question2';
-export Question3 from './Question3';
+export Gender from './Gender';
+export Age from './Age';
+export Kids from './Kids';
+export Bio from './Bio';
 export Question4 from './Question4';
 export Result from './Result';
+export AgeKids from './AgeKids';

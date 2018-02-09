@@ -2,7 +2,7 @@
 
 import React, {Component} from 'react';
 
-export default class Question1 extends Component {
+export default class Gender extends Component {
   constructor() {
     super();
   }

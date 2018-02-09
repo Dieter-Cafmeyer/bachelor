@@ -32,6 +32,9 @@
 
 <div class="part2">
 
+  <img class="leftquizbubble rellax" src="../../assets/images/quizbubble_left.png" data-rellax-speed="3">
+  <img class="rightquizbubble rellax" src="../../assets/images/quizbubble_right.png" data-rellax-speed="10">
+
   <div class="part2_content">
     <h1>Wat betekent dit?</h1>
     <p>Over vruchtbaarheid en zwangerschap zijn veel misopvattingen. IVF is niet zo succesvol als men over het algemeen denkt en er staat een limiet op de leeftijd waarop je nog met grote slaagkans succesvol zwanger kan worden.</p>

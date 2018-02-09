@@ -10,19 +10,11 @@ export default class Question4 extends Component {
   render() {
     return (
       <div className='qcontent'>
-        <h1 className='question'>Overweegt u ooit (nog) kinderen?</h1>
+        <h1 className='question'>Wanneer denkt u aan kinderen te zullen beginnen?</h1>
         <div className='options'>
-
-          <div className='q1_block option' ref='v' onClick={() => this.wantKids('y')}>
-            <div><img src='../assets/images/vrouw.png' /></div>
-            <h1 className='colorBlue'>Ja</h1>
-          </div>
-
-          <div className='q1_block option' ref='m' onClick={() => this.wantKids('n')}>
-            <div><img src='../assets/images/man.png' /></div>
-            <h1 className='colorYellow'>Nee</h1>
-          </div>
-
+          <div className='q2_block q2bg2' ref='v' onClick={() => this.setAge('2')}><span>20 - 25 jaar</span></div>
+          <div className='q2_block q2bg3' ref='v' onClick={() => this.setAge('3')}><span>25 - 30 jaar</span></div>
+          <div className='q2_block q2bg4' ref='v' onClick={() => this.setAge('4')}><span>&gt; 30 jaar</span></div>
         </div>
       </div>
     );

@@ -2,7 +2,7 @@
 
 import React, {Component} from 'react';
 
-export default class Question3 extends Component {
+export default class Kids extends Component {
   constructor() {
     super();
   }
@@ -14,7 +14,7 @@ export default class Question3 extends Component {
   render() {
     return (
       <div className='qcontent'>
-        <h1 className='question'>Overweegt u ooit (nog) kinderen?</h1>
+        <h1 className='question'>Overweeg je ooit (nog) kinderen?</h1>
         <div className='options1'>
 
           <div className='q1_block option' ref='v' onClick={() => this.wantKids('y')}>

@@ -2,8 +2,8 @@
 
 import React, {Component} from 'react';
 
-import {Question1, Question2, Question3, Question4, Result} from './questions/';
-import {Info} from './';
+import {Age1, Age2, Age3, Age4} from './ages/';
+import {Gender, Age} from './questions/';
 
 let questionNumber = 0;
 
@@ -13,9 +13,7 @@ export default class App extends Component {
     this.state = {
       questionNumber: 0,
       gender: '',
-      age: '',
-      wantKids: '',
-      q4answer: ''
+      age: ''
     };
   }
 
@@ -29,29 +27,32 @@ export default class App extends Component {
     this.setState({age, questionNumber});
   }
 
-  wantKids(wantKids) {
-    questionNumber++;
-    this.setState({wantKids, questionNumber});
-  }
-
   renderQuestion() {
     if(this.state.questionNumber === 0){
-      return <Question1 setGender={gender => this.setGender(gender)} />;
+      return <Gender setGender={gender => this.setGender(gender)} />;
     }else if (this.state.questionNumber === 1){
-      return <Question2 {...this.state} setAge={age => this.setAge(age)}/>;
+      return <Age {...this.state} setAge={age => this.setAge(age)}/>;
     }else if (this.state.questionNumber === 2){
-      return <Question3 {...this.state} wantKids={wantKids => this.wantKids(wantKids)}/>;
-    }else if (this.state.questionNumber === 3){
-      return <Question4 {...this.state}/>;
+      return this.renderAge();
+    }
+  }
+
+  renderAge() {
+    if(this.state.age === '1') {
+      return <Age1 {...this.state} />;
+    }else if(this.state.age === '2') {
+      return <Age2 {...this.state} />;
+    }else if(this.state.age === '3') {
+      return <Age3 {...this.state} />;
+    }else if(this.state.age === '4') {
+      return <Age4 {...this.state} />;
     }
   }
 
   render() {
-
     return (
       <div className='quiz_content'>
         {this.renderQuestion()}
-        <Info {...this.state} />
       </div>
     );
   }
