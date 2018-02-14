@@ -24,11 +24,16 @@
 
 
   <div class="timelineholder">
-  <img class="leftquizbubble rellax" src="../../assets/images/quizbubble_left.png" data-rellax-speed="3">
-  <img class="rightquizbubble rellax" src="../../assets/images/quizbubble_right.png" data-rellax-speed="10">
+
+  <img class="leftinfobubble rellax" src="../../assets/images/infobubble_left.png" data-rellax-speed="3">
+  <img class="rightinfobubble rellax" src="../../assets/images/infobubble_right.png" data-rellax-speed="10">
 
 
     <div class="timeline">
+
+      <div class="timelineoverlayholder">
+        <div class="timelineoverlay"></div>
+      </div>
 
 
       <div class="lineItem leftItem">
@@ -71,8 +76,75 @@
         </div>
       </div>
 
+      <div class="lineItem rightItem">
+        <div class="itemContent">
+          <h2><span>32</span> jaar</h2>
+          <p>Vanaf je tweëendertigste zakt je vruchtbaarheid nog verder weg. Terwijl je op je dertigste tot wel tweëentwintig percent kans hebt om zwanger te worden per cyclus, is dit tegen je vijfendertigste gehalveerd. Die halvering gebeurt gestaag vanaf je tweëendertig jaar.</p>
+        </div>
+      </div>
+
+      <div class="lineItem leftItem">
+        <div class="itemContent">
+          <h2><span>35</span> jaar</h2>
+          <p>Zoals hiervoor gezegd zijn de kansen op een natuurlijke zwangerschap nu gehalveerd tegenover je vruchtbaarste periode. Dit wil zeggen dat er dus ongeveer nog elf percent kans is op een natuurlijke zwangerschap. Let op, hier horen vanaf deze leeftijd ook andere risicofactoren bij.</p>
+        </div>
+
+        <div class="extraContent extraright">
+          <h3>Risicofactoren?</h3>
+          <p>Vanaf je 35ste zijn er meer risico’s verbonden aan een zwangerschap. Zo verhogen bijvoorbeeld de kansen op zwangerschapsdiabetes en / of -vergiftiging.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
 
+<div class="slaagkansen">
+  <img src="../../assets/images/watmetivf.png" class="watmetivf" alt="">
+
+  <div class="stats">
+    <img src="../../assets/images/leftstats.png" alt="">
+    <div>
+    <h1>Wat met de slaagkansen?</h1>
+
+    <p>De slaagkansen van een In Vitro Fertilisatie (IVF) hangen af van de leeftijd van de vrouw op het moment dat de IVF ondernomen word. Zo ligt onder de vijfendertig jaar de slaagkans op zo’n 47,6%, en zakt dit dan gestaag naar zo’n 20,5% kans vanaf de leeftijd van vijfenveertig jaar.</p>
+
+    <h2>Let wel op!</h2>
+    <p>Dit zijn de slaagkansen per IVF-poging. Dit wil dus zeggen dat een vijfendertig jarige vrouw ongeveer tweemaal zal moeten een poging ondergaan, terwijl een vijfenveertig jarige vrouw al gemiddeld vijf pogingen moet ondergaan!</p>
+    </div>
+  </div>
+
+  <div class="risk">
+    <img src="../../assets/images/rightrisk.png" alt="">
+    <div>
+    <h1>… of de risico’s?</h1>
+
+    <p>Hoewel een positieve zwangerschapstest veelbelovend en goed nieuws is, loopt het in 25% van de gevallen alsnog fout achteraf. De kans op een miskraam ligt bij IVF hoger dan bij een natuurlijke zwangerschappen</p><br>
+
+    <p>De risico’s op ziektes en chromosomale afwijkingen ligt ook hoger dan bij een natuurlijke zwangerschap. Zo ook de kans op een te vroege geboorte of een te lichte baby bij geboorte.</p><br>
+
+    <p>Daarnaast valt niet te ontkennen dat een IVF-behandeling ook zéér mentaal uitputtend is. Dit is een levensingrijpende behandeling en brengt een ongelooflijke hoeveelheid stress met zich mee.</p><br>
+    </div>
+  </div>
+</div>
+
+<div class="knowmore">
+  <h1>Meer weten over IVF?</h1>
+  <a target="blank" href="http://www.kinderwens.be/behandelingen/medisch-begeleide-voortplanting/ivf-in-vitrofertilisatie">MEER INFO</a>
+</div>
+
+
+<script>
+  window.onscroll = function(){
+    var pageoffset = window.pageYOffset;
+    console.log(pageoffset);
+
+    var value = pageoffset-400 + 'px';
+    var timeLine = document.querySelector('.timelineoverlay');
+    timeLine.style.height = value;
+  };
+
+
+
+</script>
 

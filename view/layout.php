@@ -30,9 +30,9 @@
         <nav>
           <ul>
             <a href="/index.php?page=home"><li class="mainlink verval nav_active">Vervaldatum? <div></div></li></a>
-            <a href="/index.php?page=home#quizclip"><li class="mainlink qz">Quiz <div></div></li></a>
+            <a href="/index.php?page=home#quizclip" class="qza"><li class="mainlink qz">Quiz <div></div></li></a>
             <a href="/index.php?page=diepgaand"><li class="mainlink diep">Diepgaand <div></div></li></a>
-            <a href="/index.php?page=home"><li class="mainlink ovons">Over Ons <div></div></li></a>
+            <a target='blank' href="https://www.vives.be/nl"><li class="mainlink ovons">Over Ons <div></div></li></a>
           </ul>
         </nav>
       </div>

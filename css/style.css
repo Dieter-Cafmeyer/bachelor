@@ -168,7 +168,7 @@ footer h1 {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 20;
 }
 
 .navigation nav ul {
@@ -249,7 +249,6 @@ footer h1 {
 
 .head {
   width: 100%;
-  min-height: 100vh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -424,7 +423,7 @@ footer h1 {
 }
 
 .part2_content {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
   display: block;
   padding: 10px;
@@ -441,12 +440,12 @@ footer h1 {
   width: 95%;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
   padding-bottom: 80px;
   padding-top: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .choice_block {
@@ -523,7 +522,7 @@ footer h1 {
 
 .waves2 {
   margin-top: -250px;
-  margin-bottom: -1px;
+  margin-bottom: -2px;
   position: relative;
   z-index: 15;
 }
@@ -588,6 +587,8 @@ footer h1 {
       justify-content: space-around;
   -ms-flex-align: center;
       align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .options1 {
@@ -694,6 +695,8 @@ footer h1 {
   max-width: 810px;
   margin: 0 auto;
   margin-bottom: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .leftAnswer img {
@@ -767,6 +770,20 @@ footer h1 {
   height: 500px;
 }
 
+.leftinfobubble {
+  position: absolute;
+  left: -50px;
+  top: 600px;
+  height: 700px;
+}
+
+.rightinfobubble {
+  position: absolute;
+  right: -20px;
+  top: 1700px;
+  height: 700px;
+}
+
 .headinfo {
   max-width: 860px;
   margin: 0 auto;
@@ -827,14 +844,15 @@ footer h1 {
 /* TIMELINE */
 .timelineholder {
   margin-top: 50px;
-  margin-bottom: 200px;
   position: relative;
+  overflow: hidden;
 }
 
 .timeline {
   margin: 0 auto;
   position: relative;
   max-width: 900px;
+  padding-bottom: 100px;
 }
 
 .timelineholder::after {
@@ -842,10 +860,26 @@ footer h1 {
   position: absolute;
   width: 10px;
   background-color: #FCD487;
-  top: 0;
-  bottom: 0;
+  top: 100px;
   left: 50%;
-  margin-left: -3px;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+.timelineoverlayholder {
+  width: 10px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: 9;
+  overflow: hidden;
+  top: 100px;
+  bottom: 0;
+}
+
+.timelineoverlay {
+  background-color: #8985FC;
+  border-radius: 10px;
 }
 
 .lineItem {
@@ -863,11 +897,11 @@ footer h1 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  right: -25px;
+  right: -23px;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
-  z-index: 1;
+  z-index: 10;
 }
 
 .leftItem {
@@ -880,7 +914,7 @@ footer h1 {
 }
 
 .rightItem::after {
-  left: -20px;
+  left: -22px;
 }
 
 .itemContent {
@@ -906,11 +940,12 @@ footer h1 {
 
 .extraContent {
   min-height: 70%;
-  margin: 10% 20px;
+  margin: 0 20px;
   width: 80%;
   position: absolute;
   left: -100%;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   border-radius: 5px;
   background: linear-gradient(135deg, #8981ff 0%, #635bd9 100%);
   padding: 40px;
@@ -931,4 +966,435 @@ footer h1 {
   letter-spacing: 1px;
 }
 
+.extraright {
+  left: 110%;
+  text-align: left;
+}
+
+.watmetivf {
+  width: 300px;
+  margin: 0 auto;
+  display: block;
+  margin-top: -50px;
+  margin-bottom: 150px;
+  position: relative;
+  z-index: 20;
+}
+
+.stats {
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.stats div {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 100px;
+}
+
+.stats img {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  width: 300px;
+}
+
+.stats h2 {
+  margin-top: 20px;
+  color: #8981FF;
+  font-weight: 800;
+}
+
+.stats p {
+  line-height: 170%;
+}
+
+.stats h1 {
+  font-family: 'muller';
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+.risk {
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.risk div {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-right: 100px;
+}
+
+.risk img {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  width: 300px;
+}
+
+.risk h2 {
+  margin-top: 20px;
+  color: #8981FF;
+  font-weight: 800;
+}
+
+.risk p {
+  line-height: 170%;
+}
+
+.risk h1 {
+  font-family: 'muller';
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+.knowmore {
+  min-height: 300px;
+  max-width: 960px;
+  z-index: 20;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.knowmore h1 {
+  font-size: 3em;
+  font-family: 'muller';
+  color: #635BD9;
+}
+
+.knowmore a {
+  background: linear-gradient(135deg, #8981ff 0%, #635bd9 100%);
+  color: white;
+  text-transform: uppercase;
+  font-family: 'muller';
+  padding: 15px 30px;
+  border-radius: 100px;
+  margin-top: 30px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* === Responsive CSS === */
+@media only screen and (max-width: 1200px) {
+  .leftquizbubble, .rightquizbubble {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .stats img, .risk img {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .leftblob, .rightblob {
+    width: 305px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .leftblob, .rightblob {
+    width: 305px;
+  }
+  .leftinfobubble, .rightinfobubble {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .infoblobright {
+    display: none;
+  }
+  .infoblob {
+    width: 300px;
+    top: 170px;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .rightblob {
+    width: 230px;
+    top: 0px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    background-position: top center;
+    height: 100%;
+    top: 150px;
+  }
+  .leftblob {
+    display: none;
+  }
+  .head_content {
+    margin-left: 150px;
+    -ms-flex-align: start;
+        align-items: flex-start;
+  }
+  .head_contentbottom {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .innernavigation {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .leftAnswer div h2 {
+    font-size: 2em;
+  }
+  .stats img, .risk img {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .timelineoverlayholder {
+    left: 50px;
+    bottom: 150px;
+    top: 30px;
+  }
+  .watmetivf {
+    display: none;
+  }
+  .timelineholder::after {
+    left: 50px;
+    bottom: 150px;
+    top: 30px;
+  }
+  .lineItem {
+    width: 100%;
+    text-align: left;
+  }
+  .itemContent {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .extraContent {
+    position: relative;
+    left: 45px;
+    transform: translateY(0);
+  }
+  .itemContent::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  .leftItem::after, .rightItem::after {
+    left: 27px;
+  }
+  .lineItem::after {
+    top: 20px;
+    transform: translateY(0);
+  }
+  .rightItem {
+    left: 0%;
+  }
+  .leftinfobubble, .rightinfobubble {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .choice_block {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .innernavigation {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .leftblob {
+    display: none;
+  }
+  .smallblobright {
+    display: none;
+  }
+  .head_contentbottom {
+    padding-left: 0;
+  }
+  .head {
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+  }
+  .head_content {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .leftAnswer {
+    height: auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    background-color: transparent;
+  }
+  .leftAnswer img {
+    border-radius: 500px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: #FBD28C;
+    -ms-flex-order: 1;
+        order: 1;
+  }
+  .leftAnswer div {
+    width: 100%;
+    -ms-flex-order: 2;
+        order: 2;
+    -ms-flex: auto;
+        flex: auto;
+    text-align: center;
+  }
+  .leftAnswer div h2 {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .leftAnswer div p {
+    text-align: center;
+  }
+  .headinfo {
+    min-height: 0;
+    margin-top: 100px;
+  }
+  .stats img, .risk img {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .infoblob {
+    width: 200px;
+    top: 220px;
+  }
+  .headinfo {
+    padding-left: 210px;
+  }
+  .headinfo h1 {
+    font-size: 2.5em;
+  }
+  .headinfo p {
+    font-size: 1.1em;
+  }
+  .stats img, .risk img {
+    display: none;
+  }
+  .stats div, .risk div {
+    padding: 20px;
+  }
+  .stats, .risk {
+    margin-bottom: 40px;
+  }
+  .knowmore {
+    min-height: 350px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .head_contenttop {
+    font-size: 3.5em;
+  }
+  .info {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .q2_block {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .q1_block {
+    min-height: 100px;
+    width: 50%;
+  }
+  .part2 h1 {
+    font-size: 2em;
+  }
+  .q2_block:hover {
+    padding: 35px 50px;
+    margin: 5px;
+  }
+  .head_content {
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .infoblob {
+    display: none;
+  }
+  .headinfo {
+    padding-left: 0;
+    padding: 20px;
+    text-align: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .headinfo h1 {
+    text-align: center;
+  }
+  .headinfo a {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .head_contenttop {
+    font-size: 3em;
+  }
+  .head {
+    min-height: 0;
+  }
+  .head_content {
+    width: 90%;
+    padding-top: 180px;
+  }
+  .rightblob {
+    width: 190px;
+    min-height: 100vh;
+    background-position: top center;
+    top: 160px;
+  }
+  .head_contentbottom {
+    font-size: 1.1em;
+  }
+  .navigation nav {
+    width: 100%;
+  }
+  .navigation nav ul {
+    width: 100%;
+  }
+  .qza {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .head_contenttop {
+    font-size: 2em;
+  }
+  .rightblob {
+    width: 130px;
+  }
+}

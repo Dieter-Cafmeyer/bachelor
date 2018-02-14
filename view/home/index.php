@@ -40,7 +40,6 @@
     <p>Over vruchtbaarheid en zwangerschap zijn veel misopvattingen. IVF is niet zo succesvol als men over het algemeen denkt en er staat een limiet op de leeftijd waarop je nog met grote slaagkans succesvol zwanger kan worden.</p>
   </div>
 
-
 <div id="quizclip"></div>
 
 <div class="choice" >
